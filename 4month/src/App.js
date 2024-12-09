@@ -1,46 +1,48 @@
 import './App.css';
+//components
+import About from "./components/About/about";
+import Title from "./components/title/Title";
+
+//pages
+import MainPage from "./pages/mainPage/MainPage";
+import AboutPage from "./pages/aboutPage/AboutPage";
+import ContockPage from "./pages/contockPage/ContockPage";
+import TitlePage from "./pages/titlePage/TitlePage";
 
 
-function Header(){
-    return(
-        <header >
-            <Title text = "I am footer component" />
-            <p>Lorem ipsum dolor sit.</p>
-        </header>
-    )
-}
-
-function Footer(){
-    return(
-        <footer>
-            <Title/>
-        </footer>
-    )
-}
-
-function Content(){
-    return(
-        <>
-            <p>loren ipsum sit </p>
-        </>
-    )
-}
-
-function Title(props){
-    console.log(props)
-    return <h2>{props.text}, my name is{props.name}</h2>
-}
 
 
 function App() {
   return (
     <div className="App">
-        <Header />
-        <Footer />
-        <Content />
+        <MainPage/>
+
     </div>
   );
 }
 
 export default App;
 
+
+
+
+
+
+
+
+
+
+
+const user = {
+    name: "Anna",
+    Age:20
+}
+
+// const name = user.name
+// const Age = user.Age
+
+const {name, Age,username} = user
+
+console.log(name)
+console.log(Age)
+console.log(username)
