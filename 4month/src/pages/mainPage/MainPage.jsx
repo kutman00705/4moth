@@ -1,19 +1,21 @@
-import style from './mainPage.module.css'
-import About from "../../components/About/about";
-import Title from "../../components/title/Title";
-
-const number = [1, 2, 3, 4, 5];
+import React from 'react';
+import styles from './mainPage.module.css';
+import Description from '../../components/description/Description';
 
 function MainPage() {
-
-    const elements  = number.map((el,index) => <div></div>)
+    const renderWords = (text) =>
+        text.split(' ').map((word, index) => (
+            <span key={index} className={styles.titleWord}>
+        {word}{' '}
+      </span>
+        ));
 
     return (
-        <>
-            <About info={{title: "Some Title", body:"Some body"}}/>
-            <Title text={"Hello world"}/>
-        </>
-    )
+        <div>
+            <h1>{renderWords('Добро пожаловать на главную страницу')}</h1>
+            <Description info={{ title: 'Заголовок 2', description: 'Описание 2' }} />
+        </div>
+    );
 }
 
 export default MainPage;

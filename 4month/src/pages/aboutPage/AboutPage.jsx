@@ -1,11 +1,13 @@
-import style from './aboutPage.module.css'
+import React from 'react';
+import styles from './aboutPage.module.css';
+import Description from "../../components/description/Description";
 
-function AboutPage() {
+function AboutPage(props) {
     return (
-        <>
-            <h2 className={style.title}>AboutPage</h2>
-        </>
-    )
+        <div>
+            <Description info={{title: "Title", description: "description"}} />
+        </div>
+    );
 }
 
 export default AboutPage;

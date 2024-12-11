@@ -1,0 +1,28 @@
+@keyframes wordColorChange {
+    0% {
+        color: red;
+    }
+    25% {
+        color: orange;
+    }
+    50% {
+        color: yellow;
+    }
+    75% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.colorfulWord {
+    display: inline-block; /* Для работы с отдельными словами */
+    font-weight: bold;
+    animation: wordColorChange 3s infinite;
+    transition: transform 0.3s ease-in-out;
+}
+
+.colorfulWord:hover {
+    transform: scale(1.2); /* Увеличение при наведении */
+}

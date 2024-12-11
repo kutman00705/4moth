@@ -1,0 +1,24 @@
+
+@keyframes fadeAndColor {
+    0% {
+        color: red;
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    50% {
+        color: orange;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        color: green;
+        transform: translateX(10px);
+        opacity: 1;
+    }
+}
+
+.animatedTodo {
+    font-size: 18px;
+    font-weight: bold;
+    animation: fadeAndColor 2s infinite alternate;
+}

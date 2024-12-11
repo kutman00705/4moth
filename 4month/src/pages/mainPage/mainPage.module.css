@@ -1,4 +1,12 @@
-/*.title{*/
-/*    color: #e40f0f;*/
-/*}*/
+.titleWord {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    animation: wordColorChange 2s infinite; /* Используем ту же анимацию, что и раньше */
+}
 
+.descriptionWord {
+    font-size: 18px;
+    font-weight: normal;
+    animation: wordColorChange 3s infinite;
+}
